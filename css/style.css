@@ -106,9 +106,7 @@ input {
 }
 
 .linck-banner__btn {
-  background-color: transparent;
-  -webkit-filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.28));
-          filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.28));
+  background-color: #00ECEC;
 }
 
 .home-banner {
@@ -834,6 +832,10 @@ input {
   transition: transform 0.7s ease 0s, -webkit-transform 0.7s ease 0s;
 }
 
+.footer-contakt .contact-li {
+  font-size: calc(18px + 2 * ((100vw - 320px) / 1600));
+}
+
 @media (min-width: 767.98px) {
   .header-home {
     background-color: rgba(121, 121, 121, 0.45);
@@ -1031,7 +1033,9 @@ input {
   }
 
   .linck-banner__btn:hover {
-    background-color: #00ECEC;
+    background-color: transparent;
+    -webkit-filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.28));
+            filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.28));
   }
 }
 
