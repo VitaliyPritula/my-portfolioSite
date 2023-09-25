@@ -34,6 +34,15 @@ body {
   font-family: "Inter";
 }
 
+body.lock {
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  -ms-touch-action: none;
+      touch-action: none;
+  -ms-scroll-chaining: none;
+      overscroll-behavior: none;
+}
+
 h1,
 h2,
 h3,
@@ -45,7 +54,6 @@ h6 {
 }
 
 .wrapper {
-  position: relative;
   min-height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -54,7 +62,23 @@ h6 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  overflow: clip;
+  overflow: hidden;
+}
+
+@supports (overflow: clip) {
+  .wrapper {
+    overflow: clip;
+  }
+}
+
+.wrapper > main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.wrapper > * {
+  min-width: 0;
 }
 
 ._ibg {
@@ -127,6 +151,50 @@ input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.lock body {
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  -ms-touch-action: none;
+      touch-action: none;
+  -ms-scroll-chaining: none;
+      overscroll-behavior: none;
+}
+
+/*
+(i) Стилі будуть застосовуватись до
+всіх класів, що містять *__container
+Наприклад header__container, main__container і т.п.
+Сніппет (HTML): cnt
+*/
+
+[class*=__container] {
+  max-width: rem(1230);
+  margin: 0 auto;
+  padding: 0 rem(15);
+}
+
+.lock body {
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  -ms-touch-action: none;
+      touch-action: none;
+  -ms-scroll-chaining: none;
+      overscroll-behavior: none;
+}
+
+/*
+(i) Стилі будуть застосовуватись до
+всіх класів, що містять *__container
+Наприклад header__container, main__container і т.п.
+Сніппет (HTML): cnt
+*/
+
+[class*=__container] {
+  max-width: 76.875rem;
+  margin: 0 auto;
+  padding: 0 0.9375rem;
 }
 
 .pop-up {
@@ -324,12 +392,6 @@ input {
 ::-webkit-scrollbar-thumb {
   background: #888896;
   height: 20px;
-}
-
-[class*=__container] {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
 }
 
 .social {
@@ -569,7 +631,7 @@ input {
 }
 
 .homeSkil li:not(:last-child) {
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
 }
 
 .homeSkil li::marker {
