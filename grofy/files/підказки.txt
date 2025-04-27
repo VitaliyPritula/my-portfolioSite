@@ -1,8 +1,0 @@
-
-для стоврення svgSprite потрібно виконати 
-npm run svgSprive
-
-для запуска в режимі розробки: npm run dev
-для запуска в режимі продакшен: npm run build
-
-margin: 0px 0px 48px/20px * 1em 0px;
