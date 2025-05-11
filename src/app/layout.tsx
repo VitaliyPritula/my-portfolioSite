@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     siteName: "Your Name | Frontend Engineer",
     images: [
       {
-        url: "/public/images.png",
+        url: "https://portfolio-vitaliy.vercel.app/images.png",
         width: 1200,
         height: 630,
         alt: "Frontend Engineer Portfolio Preview",
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
       "Vitalii Prytula | Frontend Developer | React, TypeScript, Tailwind CSS",
     description:
       "Frontend Engineer with expertise in React, TypeScript and modern UI. Portfolio and contact info.",
-    images: ["/public/images.png"],
+    images: ["https://portfolio-vitaliy.vercel.app/images.png"],
   },
 };
 
