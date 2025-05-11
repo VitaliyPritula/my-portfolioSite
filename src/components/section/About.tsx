@@ -5,6 +5,7 @@ export default function About() {
   return (
     <section id="about" className="relative">
       <div className="container mx-auto px-4">
+        <h2>About Me</h2>
         <p>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas
           autem maiores laudantium quisquam laboriosam nemo eum aliquam unde

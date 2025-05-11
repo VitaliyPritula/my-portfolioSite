@@ -1,7 +1,9 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Mail } from "lucide-react";
+import { Typewriter } from "react-simple-typewriter";
 import { useEffect, useState } from "react";
+
 
 const Hero = () => {
   const [mounted, setMounted] = useState(false);
@@ -12,28 +14,39 @@ const Hero = () => {
   }, []);
 
   return (
-    <section id="home" className="min-h-screen flex items-center pt-16 ">
+    <section
+      id="home"
+      className="min-h-screen flex items-center lg:pt-[64px] pt-[30px]">
       <div className="container mx-auto px-4 relative">
-        <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-center">
+        <div className="flex flex-col md:flex-row gap-2 md:gap-12 items-center">
           <div
             className={`flex-1 z-10 transition-all duration-700 ${
               mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-gradient">
+            <h1 className="text-4xl lg:text-6xl font-bold lg:mb-4 mb-2 text-gradient">
               <span className="block">Vitalii Prytula</span>
-              <span className="block"></span>
             </h1>
-
-            <h2 className="text-xl md:text-[30px] font-medium mb-4 text-acces font-extrabold">
-              Frontend Developer
+            <h2 className="text-4xl lg:text-6xl font-medium lg:mb-4 mb-2 text-acces font-extrabold">
+              <Typewriter
+                words={[
+                  "Frontend Developer",
+                  "React Expert",
+                  "UI/UX Enthusiast",
+                ]}
+                loop
+                cursor
+                cursorStyle="|"
+                typeSpeed={70}
+                deleteSpeed={50}
+                delaySpeed={1500}
+              />
             </h2>
-
             <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-lg">
               Building responsive and modern user interfaces with React,
               TypeScript, and Tailwind CSS.
             </p>
 
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-col lg:flex-row gap-4">
               <Button
                 className="bg-btn hover:bg-accent/90 rounded-full px-8"
                 asChild>
@@ -69,7 +82,6 @@ const Hero = () => {
                 <Linkedin size={20} />
                 <span className="sr-only">LinkedIn</span>
               </a>
-
               <a
                 href="mailto:pritula.vitaly94@gmail.com"
                 className="text-muted-foreground hover:text-accent transition-colors rounded-full border-2 p-2 hover:text-acces  duration-300">
@@ -78,7 +90,6 @@ const Hero = () => {
               </a>
             </div>
           </div>
-
           <div
             className={`flex-1 lg:flex hidden justify-center relative transition-all duration-1000 delay-300 ${
               mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
@@ -108,6 +119,20 @@ const Hero = () => {
             <div className="absolute w-2 h-2 rounded-full bg-accent top-8 right-4 md:right-24 bg-dd"></div>
           </div>
         </div>
+      </div>
+      <div className="absolute lg:bottom-50 bottom-54 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <svg
+          className="w-6 h-6 text-gray-400"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          viewBox="0 0 24 24">
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M19 9l-7 7-7-7"
+          />
+        </svg>
       </div>
     </section>
   );
