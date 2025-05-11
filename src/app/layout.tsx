@@ -34,18 +34,18 @@ export const metadata: Metadata = {
     "JavaScript Developer",
     "Remote Frontend Jobs",
   ],
-  authors: [{ name: "Vitalii Prytula", url: "https://your-portfolio.com" }],
+  authors: [{ name: "Vitalii Prytula", url: "https://portfolio-vitaliy.vercel.app/" }],
   creator: "Vitalii Prytula",
   publisher: "Your Name or Brand",
   openGraph: {
     title: "Experienced Frontend Engineer | React, TypeScript, Tailwind CSS",
     description:
       "Portfolio of an experienced frontend engineer with a focus on React, TypeScript, and UI excellence.",
-    url: "https://your-portfolio.com",
+    url: "https://portfolio-vitaliy.vercel.app",
     siteName: "Your Name | Frontend Engineer",
     images: [
       {
-        url: "https://your-portfolio.com/og-image.jpg",
+        url: "https://portfolio-vitaliy.vercel.app/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Frontend Engineer Portfolio Preview",
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
       "Vitalii Prytula | Frontend Developer | React, TypeScript, Tailwind CSS",
     description:
       "Frontend Engineer with expertise in React, TypeScript and modern UI. Portfolio and contact info.",
-    images: ["https://your-portfolio.com/twitter-card.jpg"],
+    images: ["https://portfolio-vitaliy.vercel.app/twitter-card.jpg"],
   },
 };
 
