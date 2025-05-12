@@ -10,7 +10,7 @@ const CodeBackground = () => {
   }, []);
 
   return (
-    <div className="top-0 absolute left-0 w-full h-full overflow-hidden bg-background z-0 pointer-events-none">
+    <div className="top-0 fixed left-0 w-full h-full overflow-hidden bg-background z-0 pointer-events-none">
       {/* Darker gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-black via-[#0A0A1B] to-black/90" />
 
@@ -18,7 +18,7 @@ const CodeBackground = () => {
       <div className="absolute inset-0 opacity-[0.03] bg-[url('data:image/svg+xml;base64,...')]" />
 
       {/* Grid pattern */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#222_1px,transparent_1px),linear-gradient(to_bottom,#222_1px,transparent_1px)] bg-[size:50px_50px] opacity-[0.01]" />
+      <div className="fixed inset-0 bg-[linear-gradient(to_right,#222_1px,transparent_1px),linear-gradient(to_bottom,#222_1px,transparent_1px)] bg-[size:50px_50px] opacity-[0.01]" />
 
       {/* Blue glowing circle - right side */}
       <div

@@ -8,13 +8,15 @@ module.exports = {
   theme: {
     colors: {
       dd: "#0067BB",
+      white: "#fff",
       btn: "rgb(29, 79, 215)",
       acces: "rgb(49, 78, 201)",
+      card: "hsl(240, 10%, 3.9%)",
     },
     screens: {
       sm: "320px",
       // => @media (min-width: 320px) { ... }
-      md: "375px",
+      md: "530px",
       // => @media (min-width: 375px) { ... }
       lg: "767px",
       // => @media (min-width: 768px) { ... }
