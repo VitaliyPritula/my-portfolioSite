@@ -8,10 +8,10 @@ export const Header = () => {
   const [activeSection, setActiveSection] = useState<string | null>(null);
 
   const links = [
-    { title: "Home", sectionId: "home" },
     { title: "About", sectionId: "about" },
     { title: "Skills", sectionId: "skills" },
     { title: "Projects", sectionId: "projects" },
+    { title: "Experience", sectionId: "experience" },
     { title: "Contact", sectionId: "contact" },
   ];
 

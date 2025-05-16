@@ -13,9 +13,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section
-      id="home"
-      className="min-h-screen relative flex items-center lg:pt-[64px] pt-[30px] xl:mb-20">
+    <section className="min-h-screen relative flex items-center lg:pt-[64px] pt-[30px] xl:mb-20">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row gap-2 md:gap-12 items-center">
           <div
@@ -47,9 +45,9 @@ const Hero = () => {
 
             <div className="flex flex-col lg:flex-row gap-4">
               <Button
-                className="bg-btn hover:bg-accent/90 rounded-full px-8"
+                className="bg-btn hover:bg-acces border-btn rounded-full px-8"
                 asChild>
-                <a href="#contact">
+                <a href="#contact" className="scroll-smooth">
                   Get in touch
                   {/* <ArrowRight className="ml-2" size={16} /> */}
                 </a>
@@ -57,12 +55,12 @@ const Hero = () => {
 
               <Button
                 variant="outline"
-                className="rounded-full px-8 border-btn text-accent hover:bg-accent/10"
+                className="rounded-full px-8 border-btn hover:bg-auto text-accent"
                 asChild>
                 <a href="#projects">My Projects</a>
               </Button>
             </div>
-
+              {/* social */}
             <div className="flex gap-4 mt-8">
               <a
                 href="https://github.com/VitaliyPritula"
@@ -72,7 +70,6 @@ const Hero = () => {
                 <Github size={20} />
                 <span className="sr-only">GitHub</span>
               </a>
-
               <a
                 href="https://www.linkedin.com/in/vitaliiprytula/"
                 target="_blank"
@@ -86,6 +83,20 @@ const Hero = () => {
                 className="text-muted-foreground hover:text-accent transition-colors rounded-full border-2 p-2 hover:text-acces  duration-300">
                 <Mail size={20} />
                 <span className="sr-only">Email</span>
+              </a>
+              <a
+                href="https://t.me/vitaliy_pritula"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group text-muted-foreground hover:text-accent hover:border-acces transition-colors rounded-full border-2 p-2 duration-300">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-5 h-5 fill-gray-400 group-hover:fill-acces transition-colors duration-300"
+                  viewBox="0 0 24 24"
+                  fill="currentColor">
+                  <path d="M9.95 16.57l-0.38 3.78c0.55 0 0.79-0.23 1.09-0.5l2.62-2.4 5.45 3.98c1 0.55 1.71 0.26 1.96-0.91l3.56-16.7c0.35-1.64-0.62-2.29-1.66-1.87L1.59 9.12c-1.61 0.63-1.6 1.52-0.29 1.92l5.57 1.74 12.94-8.14c0.61-0.37 1.17-0.17 0.71 0.21l-10.44 9.72z" />
+                </svg>
+                <span className="sr-only">Telegram</span>
               </a>
             </div>
           </div>
