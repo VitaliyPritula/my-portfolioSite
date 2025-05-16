@@ -14,7 +14,7 @@ const Hero = () => {
 
   return (
     <section className="min-h-screen relative flex items-center lg:pt-[64px] pt-[30px] xl:mb-20">
-      <div className="container mx-auto px-4">
+      <div className="lg:container mx-auto px-4">
         <div className="flex flex-col md:flex-row gap-2 md:gap-12 items-center">
           <div
             className={`flex-1 z-10 transition-all duration-700 ${
@@ -23,7 +23,7 @@ const Hero = () => {
             <h1 className="text-4xl lg:text-6xl font-bold lg:mb-4 mb-2 text-gradient">
               <span className="block">Vitalii Prytula</span>
             </h1>
-            <h2 className="text-4xl lg:text-6xl font-medium lg:mb-4 mb-2 text-acces font-extrabold">
+            <h2 className="text-[30px] lg:text-3xl xl:text-4xl font-medium lg:mb-4 mb-2 text-acces font-extrabold">
               <Typewriter
                 words={[
                   "Frontend Developer",
@@ -130,7 +130,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <div className="absolute xl:bottom-20 bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <button   onClick={() => document.getElementById("about")?.scrollIntoView({ behavior: "smooth" })} className="absolute xl:bottom-20 bottom-8 left-1/2 transform cursor-pointer -translate-x-1/2 animate-bounce">
         <svg
           className="w-6 h-6 text-gray-400"
           fill="none"
@@ -143,7 +143,8 @@ const Hero = () => {
             d="M19 9l-7 7-7-7"
           />
         </svg>
-      </div>
+      </button>
+      
     </section>
   );
 };

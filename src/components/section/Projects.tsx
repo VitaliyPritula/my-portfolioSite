@@ -1,4 +1,4 @@
-// ProjectsSectionWithFilters.tsx
+
 "use client";
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -126,7 +126,7 @@ export default function ProjectsSectionWithFilters() {
               <button
                 key={tag}
                 onClick={() => toggleTag(tag)}
-                className={`px-4 py-2 rounded-md border transition-all duration-200
+                className={`px-4 py-2 rounded-md border transition-all duration-200 cursor-pointer
           ${
             isActive
               ? "bg-blue-600 text-acces border-blue-600"
@@ -160,7 +160,7 @@ export default function ProjectsSectionWithFilters() {
             ))}
           </div>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
             <AnimatePresence>
               {visibleFilteredProjects.map((project, index) => (
                 <motion.div

@@ -18,7 +18,7 @@ export default function About() {
         <div className="max-w-3xl mx-auto">
           <Card className="glass-card overflow-hidden">
             <CardContent className="p-8">
-              <p className="mb-4 text-muted-foreground">
+              <p className="mb-4 text-gray-200">
                 I&apos;m have over 4 years of frontend experience. Worked both as a
                 developer and a team lead, focusing on creating clean UI,
                 improving UX, and collaborating effectively within

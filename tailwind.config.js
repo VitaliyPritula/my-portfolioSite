@@ -1,4 +1,7 @@
 module.exports = {
+  // tailwind.config.js
+  darkMode: "class", // або "media", залежно від логіки
+
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
