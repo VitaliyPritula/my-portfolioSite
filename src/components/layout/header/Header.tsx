@@ -21,10 +21,11 @@ export const Header = () => {
     const header = document.querySelector("header");
     const element = document.getElementById(sectionId);
     const offset = header?.clientHeight ?? 0;
+    const extraOffset = -40;
 
     if (element) {
       window.scrollTo({
-        top: element.offsetTop - offset,
+        top: element.offsetTop - offset + extraOffset,
         behavior: "smooth",
       });
       setIsOpen(false);

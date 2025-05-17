@@ -13,7 +13,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="min-h-screen relative flex items-center lg:pt-[64px] pt-[30px] xl:mb-20">
+    <section className="min-h-screen relative flex items-center lg:pt-[64px] pt-[30px]">
       <div className="lg:container mx-auto px-4">
         <div className="flex flex-col md:flex-row gap-2 md:gap-12 items-center">
           <div
@@ -56,11 +56,21 @@ const Hero = () => {
               <Button
                 variant="outline"
                 className="rounded-full px-8 border-btn hover:bg-auto text-accent"
-                asChild>
-                <a href="#projects">My Projects</a>
+
+                onClick={() => {
+                  const aboutSection = document.getElementById("projects");
+                  if (aboutSection) {
+                    const offset = -160; // наприклад, прокрути на 100px вище елемента
+                    const top = aboutSection.offsetTop + offset;
+
+                    window.scrollTo({ top, behavior: "smooth" });
+                  }
+                }}>
+                  My Projects
+                
               </Button>
             </div>
-              {/* social */}
+            {/* social */}
             <div className="flex gap-4 mt-8">
               <a
                 href="https://github.com/VitaliyPritula"
@@ -130,7 +140,17 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <button   onClick={() => document.getElementById("about")?.scrollIntoView({ behavior: "smooth" })} className="absolute xl:bottom-20 bottom-8 left-1/2 transform cursor-pointer -translate-x-1/2 animate-bounce">
+      <button
+        onClick={() => {
+          const aboutSection = document.getElementById("about");
+          if (aboutSection) {
+            const offset = -170; // наприклад, прокрути на 100px вище елемента
+            const top = aboutSection.offsetTop + offset;
+
+            window.scrollTo({ top, behavior: "smooth" });
+          }
+        }}
+        className="absolute xl:bottom-20 bottom-8 left-1/2 transform cursor-pointer -translate-x-1/2 animate-bounce focus:outline-none">
         <svg
           className="w-6 h-6 text-gray-400"
           fill="none"
@@ -144,7 +164,6 @@ const Hero = () => {
           />
         </svg>
       </button>
-      
     </section>
   );
 };

@@ -7,7 +7,9 @@ export default function About() {
     <section id="about" className="relative xl:mb-20">
       <div className="lg:container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-4xl uppercase mb-8 font-bold text-gradient">About Me</h2>
+          <h2 className="text-4xl uppercase mb-8 font-bold text-gradient">
+            About Me
+          </h2>
           <p className="text-muted-foreground max-w-2xl text-[24px] mx-auto">
             Frontend developer with 4+ years of experience in building
             responsive and user-friendly interfaces using React, TypeScript, and
@@ -19,12 +21,14 @@ export default function About() {
           <Card className="glass-card overflow-hidden">
             <CardContent className="p-8">
               <p className="mb-4 text-gray-200">
-                I&apos;m have over 4 years of frontend experience. Worked both as a
+                I&apos;ve had over 4 years of frontend experience. Worked both as a
                 developer and a team lead, focusing on creating clean UI,
                 improving UX, and collaborating effectively within
                 cross-functional teams.
               </p>
-              <p className="mb-2 text-muted-foreground">My core skills include:</p>
+              <p className="mb-2 text-muted-foreground">
+                My core skills include:
+              </p>
 
               <ul className="lg:grid grid-cols-1 sm:grid-cols-2 gap-2 mb-4 font-bold ">
                 <li className="flex items-center gap-2">

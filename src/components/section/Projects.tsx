@@ -1,4 +1,3 @@
-
 "use client";
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -26,8 +25,8 @@ const projects = [
       "Animation",
     ],
     image: "/Projects/Animation.png",
+    githubLink: "https://github.com/baza-trainee/baza-everything-can-move",
     demoLink: "https://baza-everything-can-move.vercel.app/",
-    githubLink: "https://github.com/example/animation",
   },
   {
     title: "Автоінструкторка в Києві",
@@ -93,14 +92,21 @@ export default function ProjectsSectionWithFilters() {
       prev.includes(tag) ? prev.filter((t) => t !== tag) : [...prev, tag]
     );
   };
-
   const filteredProjects = projects.filter((project) => {
-    const matchesTags = selectedTags.every((tag) => project.tags.includes(tag));
-    const matchesSearch = project.title
-      .toLowerCase()
-      .includes(searchQuery.toLowerCase());
+    const matchesTags =
+      selectedTags.length === 0 ||
+      project.tags.some((tag) => selectedTags.includes(tag));
+
+    const lowerQuery = searchQuery.toLowerCase();
+
+    // Шукаємо у назві АБО у тегах
+    const matchesSearch =
+      project.title.toLowerCase().includes(lowerQuery) ||
+      project.tags.some((tag) => tag.toLowerCase().includes(lowerQuery));
+
     return matchesTags && matchesSearch;
   });
+
   const allTags = Array.from(
     new Set(projects.flatMap((project) => project.tags))
   );
@@ -170,8 +176,7 @@ export default function ProjectsSectionWithFilters() {
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: -20 }}
                   transition={{ delay: index * 0.1, duration: 0.5 }}
-                  layout
-                >
+                  layout>
                   <Card
                     key={index}
                     className="overflow-hidden flex flex-col h-full">
@@ -198,15 +203,21 @@ export default function ProjectsSectionWithFilters() {
                         {project.title
                           .split(new RegExp(`(${searchQuery})`, "gi"))
                           .map((part, i) => (
-                            <span
+                            <a
+                              href={project.demoLink}
                               key={i}
-                              className={
-                                part.toLowerCase() === searchQuery.toLowerCase()
-                                  ? "bg-acces"
-                                  : ""
-                              }>
-                              {part}
-                            </span>
+                              target="_blank"
+                              rel="noopener noreferrer">
+                              <span
+                                className={
+                                  part.toLowerCase() ===
+                                  searchQuery.toLowerCase()
+                                    ? "bg-acces"
+                                    : ""
+                                }>
+                                {part}
+                              </span>
+                            </a>
                           ))}
                       </CardTitle>
 
@@ -225,6 +236,7 @@ export default function ProjectsSectionWithFilters() {
                                   : "bg-muted"
                               }`}>
                               {tag}
+                              
                             </span>
                           );
                         })}
