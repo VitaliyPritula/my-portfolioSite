@@ -23,7 +23,7 @@ const Hero = () => {
             <h1 className="text-4xl lg:text-6xl font-bold lg:mb-4 mb-2 text-gradient">
               <span className="block">Vitalii Prytula</span>
             </h1>
-            <h2 className="text-[30px] lg:text-3xl xl:text-4xl font-medium lg:mb-4 mb-2 text-acces font-extrabold">
+            <h2 className="text-[28px] lg:text-3xl xl:text-4xl font-medium lg:mb-4 mb-2 text-acces font-extrabold">
               <Typewriter
                 words={[
                   "Frontend Developer",
