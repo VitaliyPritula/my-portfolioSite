@@ -55,7 +55,7 @@ const Hero = () => {
 
               <Button
                 variant="outline"
-                className="rounded-full px-8 border-btn hover:bg-auto text-accent"
+                className="rounded-full px-8 border-white hover:border-btn hover:bg-auto text-accent"
 
                 onClick={() => {
                   const aboutSection = document.getElementById("projects");
