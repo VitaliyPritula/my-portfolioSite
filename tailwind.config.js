@@ -12,6 +12,7 @@ module.exports = {
     colors: {
       dd: "#0067BB",
       white: "#fff",
+      default: "#0a0a0a",
       btn: "rgb(29, 79, 215)",
       acces: "rgb(49, 78, 201)",
       card: "hsl(240, 10%, 3.9%)",
@@ -31,6 +32,16 @@ module.exports = {
     extend: {
       animation: {
         "spin-slow": "spin 10s linear infinite",
+      },
+      backgroundImage: {
+        "grid-pattern": `linear-gradient(to right, #222 1px, transparent 1px),
+                         linear-gradient(to bottom, #222 1px, transparent 1px)`,
+      },
+      backgroundSize: {
+        "grid-pattern": "50px 50px",
+      },
+      opacity: {
+        1: "0.01", // якщо потрібно саме 0.01
       },
     },
   },
