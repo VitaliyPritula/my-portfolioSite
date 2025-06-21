@@ -1,11 +1,12 @@
 "use client";
-import { Github, Linkedin, Mail } from "lucide-react";
-
+import { Github, Linkedin } from "lucide-react";
+import Contact from "@/components/section/Contact";
 export default function Footer() {
   return (
     <footer
       id="contact"
       className="text-sm text-gray-400 py-6 text-center border-t border-gray-700 mt-16 text-white relative">
+      <Contact/>
       <div className="flex justify-center gap-4 text-lg mb-5">
         {/* social */}
         <div className="flex gap-4 mt-8">
@@ -25,12 +26,7 @@ export default function Footer() {
             <Linkedin size={20} />
             <span className="sr-only">LinkedIn</span>
           </a>
-          <a
-            href="mailto:pritula.vitaly94@gmail.com"
-            className="text-muted-foreground hover:text-accent transition-colors rounded-full border-2 p-2 hover:text-acces  duration-300">
-            <Mail size={20} />
-            <span className="sr-only">Email</span>
-          </a>
+          
           <a
             href="https://t.me/vitaliy_pritula"
             target="_blank"
