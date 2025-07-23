@@ -39,7 +39,7 @@ const projects = [
       "Animation",
     ],
     image: "/Projects/Chat Application.webp",
-    githubLink: "https://github.com/baza-trainee/baza-everything-can-move",
+    githubLink: "https://github.com/VitaliyPritula/Chat-Application",
     demoLink: "https://chat-application-one-wine.vercel.app/",
   },
   {
