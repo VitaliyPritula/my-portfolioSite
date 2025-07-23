@@ -27,6 +27,20 @@ const projects = [
     image: "/Projects/Animation.png",
     githubLink: "https://github.com/baza-trainee/baza-everything-can-move",
     demoLink: "https://baza-everything-can-move.vercel.app/",
+  },{
+    title: "Chat Application Landing Page",
+    description:
+      "This is a fully responsive landing page for a conditional chat application. The project was implemented from scratch — from the structure to the smallest details of the interface. The main goal is to create a modern, lightweight and animated web interface that looks equally good on all devices and emphasizes the value of the product for the user.",
+    tags: [
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Framer Motion",
+      "Animation",
+    ],
+    image: "/Projects/Chat Application.webp",
+    githubLink: "https://github.com/baza-trainee/baza-everything-can-move",
+    demoLink: "https://baza-everything-can-move.vercel.app/",
   },
   {
     title: "Автоінструкторка в Києві",
