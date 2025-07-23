@@ -40,7 +40,7 @@ const projects = [
     ],
     image: "/Projects/Chat Application.webp",
     githubLink: "https://github.com/baza-trainee/baza-everything-can-move",
-    demoLink: "https://baza-everything-can-move.vercel.app/",
+    demoLink: "https://chat-application-one-wine.vercel.app/",
   },
   {
     title: "Автоінструкторка в Києві",
