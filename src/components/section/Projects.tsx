@@ -27,7 +27,7 @@ const projects = [
     image: "/Projects/Animation.png",
     githubLink: "https://github.com/baza-trainee/baza-everything-can-move",
     demoLink: "https://baza-everything-can-move.vercel.app/",
-  },{
+  }, {
     title: "Chat Application Landing Page",
     description:
       "This is a fully responsive landing page for a conditional chat application. The project was implemented from scratch — from the structure to the smallest details of the interface. The main goal is to create a modern, lightweight and animated web interface that looks equally good on all devices and emphasizes the value of the product for the user.",
@@ -41,6 +41,15 @@ const projects = [
     image: "/Projects/Chat Application.webp",
     githubLink: "https://github.com/VitaliyPritula/Chat-Application",
     demoLink: "https://chat-application-one-wine.vercel.app/",
+  },
+  {
+    title: "Zack Snyder's Justice League Fan Page",
+    description:
+      "Responsive landing page for a fan site dedicated to Zack Snyder's Justice League. Focused on clean layout, mobile accessibility, and clear presentation of content.",
+    tags: ["React", "TypeScript", "Vite", "Tailwind CSS"],
+    image: "/Projects/Zack Snyder's Justice League.png",
+    demoLink: "https://zack-justice-league.vercel.app/",
+    githubLink: "",
   },
   {
     title: "Автоінструкторка в Києві",
@@ -147,11 +156,10 @@ export default function ProjectsSectionWithFilters() {
                 key={tag}
                 onClick={() => toggleTag(tag)}
                 className={`px-4 py-2 rounded-md border transition-all duration-200 cursor-pointer
-          ${
-            isActive
-              ? "bg-blue-600 text-acces border-blue-600"
-              : "text-gray-700 border-gray-300 hover:bg-muted"
-          }`}>
+          ${isActive
+                    ? "bg-blue-600 text-acces border-blue-600"
+                    : "text-gray-700 border-gray-300 hover:bg-muted"
+                  }`}>
                 {tag}
               </button>
             );
@@ -225,7 +233,7 @@ export default function ProjectsSectionWithFilters() {
                               <span
                                 className={
                                   part.toLowerCase() ===
-                                  searchQuery.toLowerCase()
+                                    searchQuery.toLowerCase()
                                     ? "bg-acces"
                                     : ""
                                 }>
@@ -244,13 +252,12 @@ export default function ProjectsSectionWithFilters() {
                           return (
                             <span
                               key={idx}
-                              className={`px-2 py-1 text-xs rounded-md transition-all duration-200 ${
-                                isSelected
+                              className={`px-2 py-1 text-xs rounded-md transition-all duration-200 ${isSelected
                                   ? "bg-blue-600 text-white"
                                   : "bg-muted"
-                              }`}>
+                                }`}>
                               {tag}
-                              
+
                             </span>
                           );
                         })}
