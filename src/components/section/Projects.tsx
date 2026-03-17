@@ -50,6 +50,14 @@ const projects = [
     image: "/Projects/Zack Snyder's Justice League.png",
     demoLink: "https://zack-justice-league.vercel.app/",
     githubLink: "",
+  }, {
+    title: "Натуральний мед з власної пасіки",
+    description:
+      "Натуральний мед з власної пасіки Без домішок, без посередників. Чистий мед від сім'ї, яка займається бджільництвом понад 10 років.",
+    tags: ["Next.js", "TypeScript", "Tailwind CSS"],
+    image: "/Projects/vlasnaPasika.png",
+    demoLink: "https://family-apiary-website.vercel.app/",
+    githubLink: "",
   },
   {
     title: "Автоінструкторка в Києві",
@@ -253,8 +261,8 @@ export default function ProjectsSectionWithFilters() {
                             <span
                               key={idx}
                               className={`px-2 py-1 text-xs rounded-md transition-all duration-200 ${isSelected
-                                  ? "bg-blue-600 text-white"
-                                  : "bg-muted"
+                                ? "bg-blue-600 text-white"
+                                : "bg-muted"
                                 }`}>
                               {tag}
 

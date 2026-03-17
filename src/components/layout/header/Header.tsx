@@ -73,7 +73,7 @@ export const Header = () => {
           <Image
             className="h-10 w-10 lg:h-12 lg:w-12"
             src="/LOGO.svg"
-            alt="Logo Baza Trainee Ukraine"
+            alt="Logo"
             width={48}
             height={48}
             priority
