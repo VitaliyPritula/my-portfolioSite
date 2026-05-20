@@ -30,7 +30,7 @@ const projects = [
   },
   {
     title: "Dashbord-ui",
-    Description: "This is a comprehensive, responsive admin dashboard developed from scratch with a focus on data visualization. The interface provides real-time monitoring of key business metrics like active users, MRR, and conversion rates through clean typography and interactive charts. Designed in a modern dark theme, the project balances complex data presentation with minimalist, intuitive UI elements.",
+    description: "This is a comprehensive, responsive admin dashboard developed from scratch with a focus on data visualization. The interface provides real-time monitoring of key business metrics like active users, MRR, and conversion rates through clean typography and interactive charts. Designed in a modern dark theme, the project balances complex data presentation with minimalist, intuitive UI elements.",
     tags: [
       "React",
       "TypeScript",
