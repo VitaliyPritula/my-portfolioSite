@@ -11,7 +11,38 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/Сard";
-const projects = [
+
+const projects = [  
+  {
+    title: "Chat Application Landing Page",
+    description:
+      "This is a fully responsive landing page for a conditional chat application. The project was implemented from scratch — from the structure to the smallest details of the interface. The main goal is to create a modern, lightweight and animated web interface that looks equally good on all devices and emphasizes the value of the product for the user.",
+    tags: [
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Framer Motion",
+      "Animation",
+    ],
+    image: "/Projects/Chat Application.webp",
+    githubLink: "https://github.com/VitaliyPritula/Chat-Application",
+    demoLink: "https://chat-application-one-wine.vercel.app/",
+  },
+  {
+    title: "Chat Application Landing Page",
+    description:
+      "This is a fully responsive landing page for a conditional chat application. The project was implemented from scratch — from the structure to the smallest details of the interface. The main goal is to create a modern, lightweight and animated web interface that looks equally good on all devices and emphasizes the value of the product for the user.",
+    tags: [
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Framer Motion",
+      "Animation",
+    ],
+    image: "/Projects/dashbord-ui.png",
+    githubLink: "https://github.com/VitaliyPritula/Dashbord",
+    demoLink: "https://dashbord-sepia-omega.vercel.app/",
+  },
   {
     title: "Everything Сan Move",
     description:
@@ -27,20 +58,6 @@ const projects = [
     image: "/Projects/Animation.png",
     githubLink: "https://github.com/baza-trainee/baza-everything-can-move",
     demoLink: "https://baza-everything-can-move.vercel.app/",
-  }, {
-    title: "Chat Application Landing Page",
-    description:
-      "This is a fully responsive landing page for a conditional chat application. The project was implemented from scratch — from the structure to the smallest details of the interface. The main goal is to create a modern, lightweight and animated web interface that looks equally good on all devices and emphasizes the value of the product for the user.",
-    tags: [
-      "React",
-      "TypeScript",
-      "Tailwind CSS",
-      "Framer Motion",
-      "Animation",
-    ],
-    image: "/Projects/Chat Application.webp",
-    githubLink: "https://github.com/VitaliyPritula/Chat-Application",
-    demoLink: "https://chat-application-one-wine.vercel.app/",
   },
   {
     title: "Zack Snyder's Justice League Fan Page",
@@ -201,7 +218,7 @@ export default function ProjectsSectionWithFilters() {
               {visibleFilteredProjects.map((project, index) => (
                 <motion.div
                   className=" dark:bg-zinc-900 rounded-xl shadow"
-                  key={project.title}
+                  key={`${project.title}-${index}`}
                   initial={{ opacity: 0, x: 10 }}
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: -20 }}
