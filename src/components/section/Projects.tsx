@@ -1,8 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Github } from "lucide-react";
 import {
   Card,
   CardContent,
@@ -11,8 +8,11 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/Сard";
+import { AnimatePresence, motion } from "framer-motion";
+import { Github } from "lucide-react";
+import { useEffect, useState } from "react";
 
-const projects = [  
+const projects = [
   {
     title: "Chat Application Landing Page",
     description:
