@@ -29,15 +29,12 @@ const projects = [
     demoLink: "https://chat-application-one-wine.vercel.app/",
   },
   {
-    title: "Chat Application Landing Page",
-    description:
-      "This is a fully responsive landing page for a conditional chat application. The project was implemented from scratch — from the structure to the smallest details of the interface. The main goal is to create a modern, lightweight and animated web interface that looks equally good on all devices and emphasizes the value of the product for the user.",
+    title: "Dashbord-ui",
+    Description: "This is a comprehensive, responsive admin dashboard developed from scratch with a focus on data visualization. The interface provides real-time monitoring of key business metrics like active users, MRR, and conversion rates through clean typography and interactive charts. Designed in a modern dark theme, the project balances complex data presentation with minimalist, intuitive UI elements.",
     tags: [
       "React",
       "TypeScript",
       "Tailwind CSS",
-      "Framer Motion",
-      "Animation",
     ],
     image: "/Projects/dashbord-ui.png",
     githubLink: "https://github.com/VitaliyPritula/Dashbord",
