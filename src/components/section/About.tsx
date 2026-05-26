@@ -11,20 +11,24 @@ export default function About() {
             About Me
           </h2>
           <p className="text-muted-foreground max-w-2xl text-[24px] mx-auto">
-            Frontend developer with 4+ years of experience in building
-            responsive and user-friendly interfaces using React, TypeScript, and
-            Next.js.
+            Frontend Engineer with 4+ years of experience building scalable React applications, SaaS platforms, and dashboard systems used in production environments.
           </p>
         </div>
 
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <Card className="glass-card overflow-hidden">
             <CardContent className="p-8">
               <p className="mb-4 text-gray-200">
-                I&apos;ve had over 4 years of frontend experience. Worked both as a
-                developer and a team lead, focusing on creating clean UI,
-                improving UX, and collaborating effectively within
-                cross-functional teams.
+                Frontend Engineer with 4+ years of experience building scalable React applications, SaaS platforms, and dashboard systems in production environments.
+                <br />
+                <br />
+                I specialize in designing frontend architectures that remain maintainable as products scale. My focus is on performance, reusable UI systems, and clean component design that reduces long-term development complexity.
+                <br />
+                <br />
+                In addition to development, I’ve worked in a lead role, helping improve UI consistency, development workflows, and overall product quality across teams.
+                <br />
+                <br />
+                I build frontend systems that not only deliver clean user interfaces, but also improve development speed and product scalability over time.
               </p>
               <p className="mb-2 text-muted-foreground">
                 My core skills include:

@@ -9,14 +9,20 @@ import {
   CardTitle,
 } from "@/components/ui/Сard";
 import { AnimatePresence, motion } from "framer-motion";
-import { Github } from "lucide-react";
+import { Github, ExternalLink } from "lucide-react";
 import { useEffect, useState } from "react";
 
 const projects = [
   {
-    title: "Chat Application Landing Page",
+    title: "Chat SaaS Landing Platform",
     description:
       "This is a fully responsive landing page for a conditional chat application. The project was implemented from scratch — from the structure to the smallest details of the interface. The main goal is to create a modern, lightweight and animated web interface that looks equally good on all devices and emphasizes the value of the product for the user.",
+    challenge:
+      "SaaS landing pages often struggle to communicate product value clearly while maintaining a lightweight and engaging user experience across devices.",
+
+    solution:
+      "Built a responsive and animation-driven interface with strong visual hierarchy, reusable UI sections, and optimized interaction flow focused on onboarding clarity.",
+
     tags: [
       "React",
       "TypeScript",
@@ -27,100 +33,181 @@ const projects = [
     image: "/Projects/Chat Application.webp",
     githubLink: "https://github.com/VitaliyPritula/Chat-Application",
     demoLink: "https://chat-application-one-wine.vercel.app/",
+    role: "Frontend Engineer",
+    impact: "Improved product clarity & onboarding UX flow",
   },
+
   {
-    title: "Dashbord-ui",
-    description: "This is a comprehensive, responsive admin dashboard developed from scratch with a focus on data visualization. The interface provides real-time monitoring of key business metrics like active users, MRR, and conversion rates through clean typography and interactive charts. Designed in a modern dark theme, the project balances complex data presentation with minimalist, intuitive UI elements.",
-    tags: [
-      "React",
-      "TypeScript",
-      "Tailwind CSS",
-    ],
+    title: "Analytics Dashboard System",
+    description:
+      "Scalable admin dashboard for real-time analytics with focus on structure, readability, and reusable UI architecture.",
+
+    challenge:
+      "Analytics dashboards can quickly become difficult to navigate and maintain as the amount of displayed data grows.",
+
+    solution:
+      "Designed a scalable dashboard architecture with reusable UI components, structured layouts, and clear data visualization patterns.",
+
+    tags: ["React", "TypeScript", "Tailwind CSS"],
     image: "/Projects/dashbord-ui.png",
     githubLink: "https://github.com/VitaliyPritula/Dashbord",
     demoLink: "https://dashbord-sepia-omega.vercel.app/",
+    role: "Frontend Engineer",
+    impact: "Optimized data visualization structure",
   },
+
   {
-    title: "Everything Сan Move",
+    title: "Motion-first E-commerce Experience",
     description:
-      "Development of a responsive and animated interface for an online store using React, TypeScript, and Next.js. Focused on smooth motion effects and interactive UI using Tailwind CSS and Framer Motion.",
-    tags: [
-      "React",
-      "TypeScript",
-      "Next.js",
-      "Tailwind CSS",
-      "Framer Motion",
-      "Animation",
-    ],
+      "Interactive UI built around motion design principles to increase engagement and improve user interaction flow.",
+
+    challenge:
+      "Traditional e-commerce interfaces often lack interactive feedback and engaging browsing experiences.",
+
+    solution:
+      "Implemented motion-driven UI interactions and animated transitions to create a more immersive and dynamic shopping experience.",
+
+    tags: ["React", "TypeScript", "Next.js", "Framer Motion", "Tailwind CSS", "Material UI"],
     image: "/Projects/Animation.png",
     githubLink: "https://github.com/baza-trainee/baza-everything-can-move",
     demoLink: "https://baza-everything-can-move.vercel.app/",
+    role: "Frontend Developer",
+    impact: "Higher engagement through motion UX",
   },
+
   {
     title: "Zack Snyder's Justice League Fan Page",
     description:
-      "Responsive landing page for a fan site dedicated to Zack Snyder's Justice League. Focused on clean layout, mobile accessibility, and clear presentation of content.",
+      "Mobile-first media platform with strong visual hierarchy and structured content delivery.",
+
+    challenge:
+      "Media-heavy interfaces often become cluttered and difficult to navigate on smaller devices.",
+
+    solution:
+      "Created a mobile-first interface with structured content sections, optimized readability, and visually balanced layouts.",
+
     tags: ["React", "TypeScript", "Vite", "Tailwind CSS"],
     image: "/Projects/Zack Snyder's Justice League.png",
     demoLink: "https://zack-justice-league.vercel.app/",
     githubLink: "",
-  }, {
-    title: "Натуральний мед з власної пасіки",
+    role: "Frontend Developer",
+    impact: "Improved mobile UX clarity",
+  },
+
+  {
+    title: "Commercial Landing for Local Business",
     description:
-      "Натуральний мед з власної пасіки Без домішок, без посередників. Чистий мед від сім'ї, яка займається бджільництвом понад 10 років.",
+      "Conversion-focused landing page designed for trust building and lead generation.",
+
+    challenge:
+      "Local businesses often need a stronger online presence to improve credibility and convert visitors into customers.",
+
+    solution:
+      "Developed a responsive landing page with trust-oriented UI sections, clear service presentation, and conversion-focused structure.",
+
     tags: ["Next.js", "TypeScript", "Tailwind CSS"],
     image: "/Projects/vlasnaPasika.png",
     demoLink: "https://family-apiary-website.vercel.app/",
     githubLink: "",
+    role: "Frontend Developer",
+    impact: "Increased conversion readiness",
   },
+
   {
-    title: "Автоінструкторка в Києві",
+    title: "Service Booking Landing Interface",
     description:
-      "Responsive landing page for a driving instructor in Kyiv. Focused on clean layout, mobile accessibility, and clear presentation of services and contact information.",
-    tags: ["Html", "Css"],
+      "Minimal mobile-first interface optimized for fast decision making and clarity.",
+
+    challenge:
+      "Users booking services on mobile devices need quick access to information without unnecessary complexity.",
+
+    solution:
+      "Built a lightweight and responsive booking interface focused on usability, accessibility, and simplified navigation flow.",
+
+    tags: ["HTML", "CSS"],
     image: "/Projects/auto-instructor.webp",
     demoLink: "https://auto-instructor.vercel.app/",
     githubLink: "",
+    role: "Frontend Developer",
+    impact: "Improved usability on mobile devices",
   },
+
   {
-    title: "Peaceful Warrior Foundation",
+    title: "Mission-driven Web Platform UI",
     description:
-      "Development of a responsive and animated interface for an online store using React, TypeScript, and Next.js. Focused on smooth motion effects and interactive UI using Tailwind CSS and Framer Motion.",
+      "Structured informational platform focused on clarity, trust, and readability.",
+
+    challenge:
+      "Informational platforms often struggle with content structure and clear communication across different user groups.",
+
+    solution:
+      "Designed a structured UI architecture with strong visual hierarchy and improved content readability for easier navigation.",
+
     tags: ["React", "TypeScript", "Next.js", "Tailwind CSS"],
     image: "/Projects/woin.webp",
     demoLink: "https://peaceful-warrior-foundation.vercel.app/ua",
     githubLink: "",
+    role: "Frontend Developer",
+    impact: "Better content structure & readability",
   },
+
   {
-    title:
-      "Drone collection for the 127th Brigade of the Armed Forces of Ukraine",
+    title: "Donation & Fundraising System UI",
     description:
-      "Development of a landing page to support fundraising for drones for the 127th Territorial Defense Brigade of the Armed Forces of Ukraine.",
-    tags: ["React", "TypeScript", "Scss", "Material UI"],
+      "Emotion-driven landing page optimized for engagement and fundraising conversion.",
+
+    challenge:
+      "Fundraising platforms need to emotionally engage users while keeping the donation process simple and intuitive.",
+
+    solution:
+      "Built a focused donation interface with emotionally-driven design elements, clear call-to-actions, and streamlined user flow.",
+
+    tags: ["React", "TypeScript", "SCSS", "Material UI"],
     image: "/Projects/127-brig.webp",
     demoLink: "https://127-zbir.vercel.app/",
     githubLink: "",
+    role: "Frontend Developer",
+    impact: "Improved donation flow clarity",
   },
+
   {
-    title: "Analytics Web Application. Dashboard for donation stats ",
+    title: "Analytics Visualization Platform",
     description:
-      "Data visualization using interactive charts and diagrams for business analytics.",
-    tags: ["React", "TypeScript", "Scss"],
+      "Data visualization UI with focus on clarity, structure, and performance.",
+
+    challenge:
+      "Complex analytics data can become difficult to interpret without structured visualization and optimized layouts.",
+
+    solution:
+      "Implemented structured data visualization components with performance-focused rendering and readable UI patterns.",
+
+    tags: ["React", "TypeScript", "SCSS"],
     image: "/Projects/44-brig.png",
     demoLink: "https://zbir-44-brigada.vercel.app/",
     githubLink: "",
+    role: "Frontend Developer",
+    impact: "Better insight presentation",
   },
+
   {
-    title: "Frontline Base - Support for the Ukrainian military",
+    title: "Defense Support Web Platform",
     description:
       "Baza Frontline - a platform for supporting the Ukrainian military. Assistance to the 44th OABr and the 100th OMBr. Together to victory!",
+
+    challenge:
+      "Military support platforms require fast access to information, clear communication, and reliable content structure for users.",
+
+    solution:
+      "Developed a structured frontend platform with clear navigation, responsive layouts, and accessible information delivery.",
+
     tags: ["React", "TypeScript", "Tailwind CSS"],
     image: "/Projects/wart.jpeg",
     demoLink: "https://baza-frontline.vercel.app/",
     githubLink: "",
+    role: "Frontend Developer",
+    impact: "Improved information accessibility",
   },
 ];
-
 export default function ProjectsSectionWithFilters() {
   const [visibleProjects, setVisibleProjects] = useState(3);
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
@@ -128,7 +215,7 @@ export default function ProjectsSectionWithFilters() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const timeout = setTimeout(() => setLoading(false), 1000);
+    const timeout = setTimeout(() => setLoading(false), 800);
     return () => clearTimeout(timeout);
   }, []);
 
@@ -137,169 +224,161 @@ export default function ProjectsSectionWithFilters() {
       prev.includes(tag) ? prev.filter((t) => t !== tag) : [...prev, tag]
     );
   };
+
   const filteredProjects = projects.filter((project) => {
-    const matchesTags =
-      selectedTags.length === 0 ||
-      project.tags.some((tag) => selectedTags.includes(tag));
+    const q = searchQuery.toLowerCase();
 
-    const lowerQuery = searchQuery.toLowerCase();
-
-    // Шукаємо у назві АБО у тегах
-    const matchesSearch =
-      project.title.toLowerCase().includes(lowerQuery) ||
-      project.tags.some((tag) => tag.toLowerCase().includes(lowerQuery));
-
-    return matchesTags && matchesSearch;
+    return (
+      (selectedTags.length === 0 ||
+        project.tags.some((tag) => selectedTags.includes(tag))) &&
+      (project.title.toLowerCase().includes(q) ||
+        project.tags.some((tag) => tag.toLowerCase().includes(q)))
+    );
   });
 
   const allTags = Array.from(
     new Set(projects.flatMap((project) => project.tags))
   );
-  const visibleFilteredProjects = filteredProjects.slice(0, visibleProjects);
+
 
   return (
     <section id="projects" className="relative xl:mb-20">
       <div className="lg:container mx-auto px-4">
-        <div className="text-center mb-8">
-          <h2 className="text-4xl uppercase mb-4 font-bold text-gradient">
-            My Projects
+
+        {/* HEADER */}
+        <div className="text-center mb-12">
+          <h2 className="text-4xl uppercase font-bold text-gradient mb-4">
+            Engineering Case Studies
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Check out some of my recent work
+            Production-grade frontend work focused on UI systems, scalability, and real product impact.
           </p>
         </div>
 
-        {/* Теги для фільтрації */}
-        <div className="mb-6 flex flex-wrap gap-2 justify-center">
+        {/* FILTERS */}
+        <div className="flex flex-wrap justify-center gap-2 mb-6">
           {allTags.map((tag) => {
-            const isActive = selectedTags.includes(tag);
+            const active = selectedTags.includes(tag);
             return (
               <button
                 key={tag}
                 onClick={() => toggleTag(tag)}
-                className={`px-4 py-2 rounded-md border transition-all duration-200 cursor-pointer
-          ${isActive
-                    ? "bg-blue-600 text-acces border-blue-600"
-                    : "text-gray-700 border-gray-300 hover:bg-muted"
-                  }`}>
+                className={`
+    px-5 py-3 rounded-2xl
+    border
+    backdrop-blur-sm
+    cursor-pointer
+    text-sm md:text-base
+    font-medium
+    shadow-lg
+    transition-all duration-300
+    hover:-translate-y-1
+
+    ${active
+                    ? "bg-acces text-black border-acces"
+                    : "border-white/10 bg-white/[0.03] text-white hover:border-acces"
+                  }
+  `}
+              >
                 {tag}
               </button>
             );
           })}
         </div>
 
-        {/* Поле пошуку */}
-        <div className="mb-8 text-center">
+        {/* SEARCH */}
+        <div className="flex justify-center mb-10">
           <input
-            type="text"
-            placeholder="Search"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="px-4 py-2 border border-gray-300 rounded-md w-full max-w-md"
+            placeholder="Search case studies..."
+            className="w-full max-w-md px-5 py-3 rounded-full bg-transparent border border-muted text-sm focus:border-acces outline-none"
           />
         </div>
 
-        {/* Проекти / Skeleton */}
+        {/* GRID */}
         {loading ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[...Array(3)].map((_, idx) => (
-              <div
-                key={idx}
-                className="h-80 bg-muted animate-pulse rounded-xl"
-              />
+            {[...Array(3)].map((_, i) => (
+              <div key={i} className="h-80 bg-muted animate-pulse rounded-xl" />
             ))}
           </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
             <AnimatePresence>
-              {visibleFilteredProjects.map((project, index) => (
+              {filteredProjects.slice(0, visibleProjects).map((project, index) => (
                 <motion.div
-                  className=" dark:bg-zinc-900 rounded-xl shadow"
-                  key={`${project.title}-${index}`}
-                  initial={{ opacity: 0, x: 10 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -20 }}
-                  transition={{ delay: index * 0.1, duration: 0.5 }}
-                  layout>
-                  <Card
-                    key={index}
-                    className="overflow-hidden flex flex-col h-full">
-                    <div className="aspect-video overflow-hidden bg-gray-800 relative">
-                      <a
-                        href={project.demoLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="block">
+                  key={project.title}
+                  initial={{ opacity: 0, y: 15 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, delay: index * 0.05 }}
+                >
+                  <Card className="overflow-hidden flex flex-col h-full hover:scale-[1.01] transition">
+
+                    <a href={project.demoLink} target="_blank">
+                      <div className="aspect-video overflow-hidden bg-gray-900">
                         <img
                           src={project.image}
-                          alt={project.title}
-                          className="w-full h-full object-cover"
-                          loading="lazy"
-                          onError={(e) => {
-                            e.currentTarget.src =
-                              "https://placehold.co/600x400/111827/FFFFFF?text=Project+Image";
-                          }}
+                          className="w-full h-full object-cover hover:scale-105 transition duration-500"
                         />
-                      </a>
-                    </div>
+                      </div>
+                    </a>
+
                     <CardHeader>
-                      <CardTitle>
-                        {project.title
-                          .split(new RegExp(`(${searchQuery})`, "gi"))
-                          .map((part, i) => (
-                            <a
-                              href={project.demoLink}
-                              key={i}
-                              target="_blank"
-                              rel="noopener noreferrer">
-                              <span
-                                className={
-                                  part.toLowerCase() ===
-                                    searchQuery.toLowerCase()
-                                    ? "bg-acces"
-                                    : ""
-                                }>
-                                {part}
-                              </span>
-                            </a>
-                          ))}
+                      <CardTitle className="text-lg">
+                        {project.title}
                       </CardTitle>
 
-                      <CardDescription>{project.description}</CardDescription>
+                      <CardDescription className="mt-2">
+                        {project.description}
+                      </CardDescription>
+
+                      <CardDescription className="space-y-3 mt-2">
+
+                        <p>
+                          <span className="font-semibold text-white">Challenge:</span>{" "}
+                          {project.challenge}
+                        </p>
+
+                        <p>
+                          <span className="font-semibold text-white">Solution:</span>{" "}
+                          {project.solution}
+                        </p>
+
+                      </CardDescription>
                     </CardHeader>
+
+                    <CardContent>
+                      <p className="text-xs text-white mt-2">
+                       <span className="font-semibold">Role:</span> {project.role} •<br/> <span className="font-semibold">Impact:</span> {project.impact}
+                      </p>
+
+                    </CardContent>
+                  
                     <CardContent>
                       <div className="flex flex-wrap gap-2">
-                        {project.tags.map((tag, idx) => {
-                          const isSelected = selectedTags.includes(tag);
-                          return (
-                            <span
-                              key={idx}
-                              className={`px-2 py-1 text-xs rounded-md transition-all duration-200 ${isSelected
-                                ? "bg-blue-600 text-white"
-                                : "bg-muted"
-                                }`}>
-                              {tag}
-
-                            </span>
-                          );
-                        })}
+                        {project.tags.map((tag) => (
+                          <span
+                            key={tag}
+                            className="px-2 py-1 text-xs rounded-full bg-muted text-muted-foreground"
+                          >
+                            {tag}
+                          </span>
+                        ))}
                       </div>
+
                     </CardContent>
+
                     <CardFooter className="flex justify-between mt-auto">
-                      <Button variant="outline" size="sm" asChild>
-                        <a
-                          href={project.demoLink}
-                          target="_blank"
-                          rel="noopener noreferrer">
-                          Demo
+                      <Button asChild variant="outline" size="sm">
+                        <a href={project.demoLink} target="_blank">
+                          Live <ExternalLink className="w-4 h-4 ml-2" />
                         </a>
                       </Button>
+
                       {project.githubLink && (
-                        <Button variant="outline" size="icon" asChild>
-                          <a
-                            href={project.githubLink}
-                            target="_blank"
-                            rel="noopener noreferrer">
+                        <Button asChild variant="outline" size="icon">
+                          <a href={project.githubLink} target="_blank">
                             <Github className="h-4 w-4" />
                           </a>
                         </Button>
@@ -312,13 +391,14 @@ export default function ProjectsSectionWithFilters() {
           </div>
         )}
 
+        {/* LOAD MORE */}
         {!loading && visibleProjects < filteredProjects.length && (
           <div className="flex justify-center mt-10">
             <Button
-              onClick={() => setVisibleProjects((prev) => prev + 3)}
               variant="outline"
-              className="gap-2 px-6 py-4 cursor-pointer">
-              Show more
+              onClick={() => setVisibleProjects((p) => p + 3)}
+            >
+              Load more
             </Button>
           </div>
         )}
