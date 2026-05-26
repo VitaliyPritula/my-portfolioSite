@@ -328,34 +328,27 @@ export default function ProjectsSectionWithFilters() {
                       <CardTitle className="text-lg">
                         {project.title}
                       </CardTitle>
-
                       <CardDescription className="mt-2">
                         {project.description}
                       </CardDescription>
-
                       <CardDescription className="space-y-3 mt-2">
-
-                        <p>
-                          <span className="font-semibold text-white">Challenge:</span>{" "}
-                          {project.challenge}
-                        </p>
-
-                        <p>
+                        <span className="font-semibold text-white">Challenge:</span>{" "}
+                        {project.challenge}
+                          <br />
+                          <br />
                           <span className="font-semibold text-white">Solution:</span>{" "}
                           {project.solution}
-                        </p>
-
                       </CardDescription>
                     </CardHeader>
-
-                    <CardContent>
-                      <p className="text-xs text-white mt-2">
-                       <span className="font-semibold">Role:</span> {project.role} •<br/> <span className="font-semibold">Impact:</span> {project.impact}
+                    <CardContent className="space-y-3">
+                      <p className="text-xs text-white">
+                        <span className="font-semibold">Role:</span> {project.role}
                       </p>
 
-                    </CardContent>
-                  
-                    <CardContent>
+                      <p className="text-xs text-white">
+                        <span className="font-semibold">Impact:</span> {project.impact}
+                      </p>
+
                       <div className="flex flex-wrap gap-2">
                         {project.tags.map((tag) => (
                           <span
@@ -366,7 +359,6 @@ export default function ProjectsSectionWithFilters() {
                           </span>
                         ))}
                       </div>
-
                     </CardContent>
 
                     <CardFooter className="flex justify-between mt-auto">

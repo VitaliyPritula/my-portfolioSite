@@ -19,43 +19,40 @@ export default function About() {
           <Card className="glass-card overflow-hidden">
             <CardContent className="p-8">
               <p className="mb-4 text-gray-200">
-                Frontend Engineer with 4+ years of experience building scalable React applications, SaaS platforms, and dashboard systems in production environments.
+                Frontend Engineer with 4+ years of experience building React-based applications, including SaaS products, dashboards, and landing pages used in production.
                 <br />
                 <br />
-                I specialize in designing frontend architectures that remain maintainable as products scale. My focus is on performance, reusable UI systems, and clean component design that reduces long-term development complexity.
+                I specialize in creating maintainable frontend architectures with reusable components and consistent UI patterns. My focus is on performance, scalability, and clean implementation of design systems.
                 <br />
                 <br />
-                In addition to development, I’ve worked in a lead role, helping improve UI consistency, development workflows, and overall product quality across teams.
+                I have experience working in both freelance and team environments, including mentoring and collaborating with other developers on shared codebases.
                 <br />
                 <br />
-                I build frontend systems that not only deliver clean user interfaces, but also improve development speed and product scalability over time.
+                I enjoy building interfaces that are not only visually clean, but also practical for long-term development and scaling.
               </p>
               <p className="mb-2 text-muted-foreground">
-                My core skills include:
+                My core skills:
               </p>
-
               <ul className="lg:grid grid-cols-1 sm:grid-cols-2 gap-2 mb-4 font-bold ">
                 <li className="flex items-center gap-2">
                   <span className="inline-block w-2 h-2 bg-dd rounded-full"></span>
-                  <span>React / TypeScript / Next.js</span>
+                  <span>UI architecture & component design</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="inline-block w-2 h-2 bg-dd rounded-full"></span>
-                  <span>Tailwind CSS, responsive design</span>
+                  <span>Responsive layout & modern CSS (Tailwind)</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="inline-block w-2 h-2 bg-dd rounded-full"></span>
-                  <span>UI/UX optimization</span>
+                  <span>Performance optimization basics</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="inline-block w-2 h-2 bg-dd rounded-full"></span>
-                  <span>Team collaboration, mentoring</span>
+                  <span>Team collaboration & code quality practices</span>
                 </li>
               </ul>
               <p className="text-muted-foreground">
-                I&apos;m passionate about clean code, continuous learning, and
-                contributing to meaningful products. Looking for a project where
-                I can bring value — technically and as a reliable teammate.
+                I&apos;m continuously improving my engineering skills and looking for opportunities where I can contribute to real products and grow as a developer in a strong team.
               </p>
             </CardContent>
           </Card>
