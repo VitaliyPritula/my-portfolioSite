@@ -19,16 +19,16 @@ export default function About() {
           <Card className="glass-card overflow-hidden">
             <CardContent className="p-8">
               <p className="mb-4 text-gray-200">
-                Frontend Engineer with 4+ years of experience building React-based applications, including SaaS products, dashboards, and landing pages used in production.
+                I’m a Frontend Engineer with experience building production React applications, including SaaS platforms, dashboards, and client projects.
                 <br />
                 <br />
-                I specialize in creating maintainable frontend architectures with reusable components and consistent UI patterns. My focus is on performance, scalability, and clean implementation of design systems.
+                My main focus is frontend architecture — how components are structured, how data flows through the UI, and how to keep codebases consistent as they grow.
                 <br />
                 <br />
-                I have experience working in both freelance and team environments, including mentoring and collaborating with other developers on shared codebases.
+                I work with React, TypeScript, and modern frontend tooling, and I care about writing code that is not only functional but also easy for other developers to work with.
                 <br />
                 <br />
-                I enjoy building interfaces that are not only visually clean, but also practical for long-term development and scaling.
+               I have experience in both freelance work and team environments, including collaboration, code reviews, and mentoring in volunteer projects.
               </p>
               <p className="mb-2 text-muted-foreground">
                 My core skills:

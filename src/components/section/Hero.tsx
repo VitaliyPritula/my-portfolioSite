@@ -52,13 +52,13 @@ const Hero = () => {
               />
             </h3>
             <p className="text-lg text-muted-foreground mb-8 max-w-xl">
-              I build scalable and maintainable frontend applications for SaaS products, dashboards, and internal tools using React ecosystem.
+              Frontend Engineer focused on building React and TypeScript applications for SaaS products, dashboards, and internal tools.
               <br />
               <br />
-              I focus on writing clean, structured code and building UI systems that are easy to extend, maintain, and scale over time. My priority is balancing performance, usability, and development efficiency.
+              I specialize in designing scalable UI architectures, reusable component systems, and clean frontend codebases that are easy to maintain and extend.
               <br />
               <br />
-              My main stack is React, TypeScript, and modern frontend tooling used in production applications.
+              My focus is on performance, predictable UI behavior, and building interfaces that support real product growth rather than just visual presentation.
             </p>
 
             {/* BUTTONS */}

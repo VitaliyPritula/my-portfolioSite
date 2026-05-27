@@ -1,106 +1,157 @@
 "use client";
-import React from "react";
-import { Code, Pen, Briefcase, User } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/Сard";
 
-const skillCategories = [
+import React from "react";
+import { Code, Layers, Rocket, Users } from "lucide-react";
+
+type SkillLevel = "core" | "advanced" | "practical";
+
+type Skill = {
+  name: string;
+  level: SkillLevel;
+};
+
+type SkillCategory = {
+  title: string;
+  description: string;
+  icon: React.ReactNode;
+  skills: Skill[];
+};
+
+const skillCategories: SkillCategory[] = [
   {
-    title: "Frontend Engineering",
-    icon: <Code className="w-8 h-8 text-primary" />,
+    title: "Frontend Architecture",
+    description:
+      "React systems with focus on structure, scalability and predictable UI behavior.",
+    icon: <Code className="w-5 h-5" />,
     skills: [
-      "React & Next.js applications",
-      "TypeScript for scalable codebases",
-      "Component architecture & reusability",
-      "Performance-oriented UI development",
-      "Modern JavaScript (ES6+)",
-      "HTML/CSS (semantic & structured)"
+      { name: "React & Next.js architecture", level: "core" },
+      { name: "TypeScript for scalable systems", level: "core" },
+      { name: "Reusable component design", level: "core" },
+      { name: "State management patterns", level: "advanced" },
+      { name: "Performance optimization", level: "advanced" },
+      { name: "Modern JavaScript", level: "practical" },
     ],
   },
   {
-    title: "UI Systems & Experience",
-    icon: <Pen className="w-8 h-8 text-primary" />,
+    title: "UI Systems",
+    description:
+      "Consistent interfaces built with reusable design patterns.",
+    icon: <Layers className="w-5 h-5" />,
     skills: [
-      "Responsive & adaptive interfaces",
-      "Design system implementation",
-      "UI consistency & scalability",
-      "UX optimization through frontend logic",
-      "Accessibility best practices"
+      { name: "Design systems", level: "core" },
+      { name: "Responsive layouts", level: "core" },
+      { name: "UI consistency", level: "core" },
+      { name: "UX-driven logic", level: "advanced" },
+      { name: "Accessibility basics", level: "practical" },
     ],
   },
   {
-    title: "Product & Delivery",
-    icon: <Briefcase className="w-8 h-8 text-primary" />,
+    title: "Product Engineering",
+    description:
+      "SaaS products, dashboards and production-ready interfaces.",
+    icon: <Rocket className="w-5 h-5" />,
     skills: [
-      "SaaS & dashboard development",
-      "Agile / Scrum workflows",
-      "Feature estimation & planning",
-      "Cross-functional collaboration",
-      "Code review & quality standards"
+      { name: "SaaS development", level: "core" },
+      { name: "Dashboard systems", level: "core" },
+      { name: "API integration", level: "core" },
+      { name: "Feature planning", level: "advanced" },
+      { name: "Code quality standards", level: "advanced" },
     ],
   },
   {
     title: "Collaboration",
-    icon: <User className="w-8 h-8 text-primary" />,
+    description:
+      "Team workflows, mentoring and ownership in delivery.",
+    icon: <Users className="w-5 h-5" />,
     skills: [
-      "Team communication",
-      "Mentoring junior developers",
-      "Problem solving in real projects",
-      "Ownership mindset"
+      { name: "Team collaboration", level: "core" },
+      { name: "Code reviews", level: "advanced" },
+      { name: "Mentoring juniors", level: "advanced" },
+      { name: "Ownership mindset", level: "core" },
     ],
   },
 ];
 
+const levelStyles: Record<SkillLevel, string> = {
+  core: "text-primary font-semibold",
+  advanced: "text-foreground",
+  practical: "text-muted-foreground",
+};
+
+const levelDot: Record<SkillLevel, string> = {
+  core: "bg-primary",
+  advanced: "bg-primary/60",
+  practical: "bg-muted-foreground",
+};
+
 export default function Skills() {
   return (
-    <section id="skills" className="py-16 md:py-24 bg-muted/30 relative">
+    <section className="py-24 relative" id="skills">
       <div className="lg:container mx-auto px-4">
 
-        <div className="text-center mb-12">
-          <h2 className="text-4xl uppercase mb-4 font-bold text-gradient">
-            Skills
+        {/* HEADER */}
+        <div className="text-center mb-14">
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
+            Technical Expertise
           </h2>
 
-          <p className="text-muted-foreground max-w-2xl text-[24px] mx-auto">
-            My expertise is focused on building scalable frontend systems and high-quality user interfaces for modern web products.
+          <p className="text-muted-foreground max-w-2xl mx-auto mt-5 text-lg">
+            Focused on building React-based systems with strong architecture,
+            reusable UI patterns and performance-oriented frontend solutions.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
-
+        {/* GRID */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {skillCategories.map((category, index) => (
-            <Card
+            <div
               key={index}
-              className="overflow-hidden bg-card hover:scale-[1.02] transition-transform duration-300"
+              className="rounded-2xl border border-border/50 bg-card/30 p-6 hover:shadow-lg transition"
             >
-              <CardContent className="p-6">
 
-                <div className="flex flex-col items-center text-center">
-
-                  <div className="mb-4 p-3 rounded-full">
-                    {category.icon}
-                  </div>
-
-                  <h3 className="text-xl font-semibold mb-4">
-                    {category.title}
-                  </h3>
-
-                  <ul className="space-y-2 w-full text-left">
-                    {category.skills.map((skill, idx) => (
-                      <li
-                        key={idx}
-                        className="py-1 px-3 bg-muted rounded-md text-sm text-muted-foreground"
-                      >
-                        {skill}
-                      </li>
-                    ))}
-                  </ul>
-
+              {/* HEADER */}
+              <div className="flex items-center gap-3 mb-4">
+                <div className="p-2 rounded-lg bg-muted text-primary">
+                  {category.icon}
                 </div>
 
-              </CardContent>
-            </Card>
-          ))}
+                <h3 className="text-xl font-semibold">
+                  {category.title}
+                </h3>
+              </div>
 
+              {/* DESCRIPTION */}
+              <p className="text-sm text-muted-foreground mb-6">
+                {category.description}
+              </p>
+
+              {/* SKILLS */}
+              <div className="space-y-3">
+                {category.skills.map((skill) => (
+                  <div
+                    key={skill.name}
+                    className="flex items-center justify-between px-3 py-2 rounded-lg bg-muted/40 border border-border/40"
+                  >
+                    {/* name */}
+                    <span className="text-sm text-foreground">
+                      {skill.name}
+                    </span>
+
+                    {/* level */}
+                    <div className="flex items-center gap-2">
+                      <span
+                        className={`w-2 h-2 rounded-full ${levelDot[skill.level]}`}
+                      />
+                      <span className={`text-xs ${levelStyles[skill.level]}`}>
+                        {skill.level}
+                      </span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+            </div>
+          ))}
         </div>
       </div>
     </section>
