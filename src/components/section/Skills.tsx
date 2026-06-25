@@ -21,53 +21,54 @@ const skillCategories: SkillCategory[] = [
   {
     title: "Frontend Architecture",
     description:
-      "React systems with focus on structure, scalability and predictable UI behavior.",
+      "Building React systems that stay maintainable as teams and products grow.",
     icon: <Code className="w-5 h-5" />,
     skills: [
-      { name: "React & Next.js architecture", level: "core" },
-      { name: "TypeScript for scalable systems", level: "core" },
-      { name: "Reusable component design", level: "core" },
-      { name: "State management patterns", level: "advanced" },
+      { name: "React & Next.js", level: "core" },
+      { name: "TypeScript", level: "core" },
+      { name: "Reusable component systems", level: "core" },
+      { name: "State management", level: "advanced" },
       { name: "Performance optimization", level: "advanced" },
-      { name: "Modern JavaScript", level: "practical" },
+      { name: "Modern JavaScript (ES6+)", level: "core" },
     ],
   },
   {
-    title: "UI Systems",
+    title: "UI & Design Systems",
     description:
-      "Consistent interfaces built with reusable design patterns.",
+      "Consistent, scalable interfaces built with reusable patterns and real UX logic.",
     icon: <Layers className="w-5 h-5" />,
     skills: [
-      { name: "Design systems", level: "core" },
+      { name: "Tailwind CSS", level: "core" },
       { name: "Responsive layouts", level: "core" },
-      { name: "UI consistency", level: "core" },
-      { name: "UX-driven logic", level: "advanced" },
-      { name: "Accessibility basics", level: "practical" },
+      { name: "Design system architecture", level: "advanced" },
+      { name: "Framer Motion / animations", level: "advanced" },
+      { name: "Accessibility (a11y)", level: "practical" },
     ],
   },
   {
     title: "Product Engineering",
     description:
-      "SaaS products, dashboards and production-ready interfaces.",
+      "SaaS platforms, dashboards and internal tools built for real users.",
     icon: <Rocket className="w-5 h-5" />,
     skills: [
-      { name: "SaaS development", level: "core" },
-      { name: "Dashboard systems", level: "core" },
-      { name: "API integration", level: "core" },
-      { name: "Feature planning", level: "advanced" },
-      { name: "Code quality standards", level: "advanced" },
+      { name: "SaaS & dashboard systems", level: "core" },
+      { name: "REST API integration", level: "core" },
+      { name: "Feature scoping & planning", level: "advanced" },
+      { name: "Code quality & standards", level: "core" },
+      { name: "Git & team workflows", level: "core" },
     ],
   },
   {
-    title: "Collaboration",
+    title: "Team & Leadership",
     description:
-      "Team workflows, mentoring and ownership in delivery.",
+      "Leading frontend delivery, raising team quality and taking ownership.",
     icon: <Users className="w-5 h-5" />,
     skills: [
-      { name: "Team collaboration", level: "core" },
-      { name: "Code reviews", level: "advanced" },
-      { name: "Mentoring juniors", level: "advanced" },
-      { name: "Ownership mindset", level: "core" },
+      { name: "Frontend team lead", level: "core" },
+      { name: "Code reviews", level: "core" },
+      { name: "Mentoring junior developers", level: "advanced" },
+      { name: "Async collaboration", level: "core" },
+      { name: "Ownership & delivery mindset", level: "core" },
     ],
   },
 ];
@@ -96,8 +97,8 @@ export default function Skills() {
           </h2>
 
           <p className="text-muted-foreground max-w-2xl mx-auto mt-5 text-lg">
-            Focused on building React-based systems with strong architecture,
-            reusable UI patterns and performance-oriented frontend solutions.
+            4+ years building production React applications — from component
+            architecture to team leadership and delivery.
           </p>
         </div>
 
@@ -132,12 +133,10 @@ export default function Skills() {
                     key={skill.name}
                     className="flex items-center justify-between px-3 py-2 rounded-lg bg-muted/40 border border-border/40"
                   >
-                    {/* name */}
                     <span className="text-sm text-foreground">
                       {skill.name}
                     </span>
 
-                    {/* level */}
                     <div className="flex items-center gap-2">
                       <span
                         className={`w-2 h-2 rounded-full ${levelDot[skill.level]}`}

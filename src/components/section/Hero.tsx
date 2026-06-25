@@ -40,8 +40,9 @@ const Hero = () => {
               <Typewriter
                 words={[
                   "Frontend Engineer",
-                  "React / TypeScript Expert",
-                  "UI/UX Architecture & Saas Systems",
+                  "React & TypeScript",
+                  "SaaS & Dashboard Systems",
+                  "Frontend Team Lead",
                 ]}
                 loop
                 cursor
@@ -52,13 +53,15 @@ const Hero = () => {
               />
             </h3>
             <p className="text-lg text-muted-foreground mb-8 max-w-xl">
-              Frontend Engineer focused on building React and TypeScript applications for SaaS products, dashboards, and internal tools.
+              Frontend Engineer with 4+ years building React and TypeScript applications
+              for SaaS products, dashboards, and internal tools.
               <br />
               <br />
-              I specialize in designing scalable UI architectures, reusable component systems, and clean frontend codebases that are easy to maintain and extend.
+              I focus on scalable UI architecture, reusable component systems,
+              and clean codebases — built to grow with the product, not just look good on launch day.
               <br />
               <br />
-              My focus is on performance, predictable UI behavior, and building interfaces that support real product growth rather than just visual presentation.
+              Available for full-time roles and freelance projects.
             </p>
 
             {/* BUTTONS */}

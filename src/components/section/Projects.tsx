@@ -6,16 +6,16 @@ import { useEffect, useState } from "react";
 const projects = [
   {
     title: "Analytics Dashboard System",
-    context: "Improving dashboard readability for high-density data.",
+    context: "High-density data that nobody could read at a glance.",
     type: "Dashboard",
     difficulty: "Medium complexity",
     stack: ["React", "TypeScript", "Tailwind"],
     problem:
-      "Data-heavy interfaces were difficult to scan and maintain at scale.",
+      "The existing dashboard mixed unrelated metrics on a single screen. Operators spent time searching for data instead of acting on it.",
     solution:
-      "Built modular dashboard architecture with reusable components and structured layout system.",
+      "Rebuilt the layout with a modular component system — each widget independent, composable, and easy to extend without breaking others.",
     impact:
-      "Reduced cognitive load in data-heavy interfaces.",
+      "Data-heavy screens became scannable. New widgets added by the team without touching existing layout.",
     image: "/Projects/Dashbord.png",
     demoLink: "https://dashbord-sepia-omega.vercel.app/",
     githubLink: "https://github.com/VitaliyPritula/Dashbord",
@@ -23,147 +23,146 @@ const projects = [
   },
   {
     title: "Chat SaaS Landing Platform",
-    context: "Fixing first-10-second drop-off in SaaS onboarding.",
+    context: "Users left before understanding what the product does.",
     type: "SaaS",
     image: "/Projects/Chat Application.webp",
     difficulty: "High complexity",
     stack: ["React", "TypeScript", "Tailwind", "Framer Motion"],
     problem:
-      "Users failed to understand product value within the first seconds of landing.",
+      "The landing had no clear hierarchy. Users couldn't identify the core value within the first 10 seconds — the most critical window for SaaS activation.",
     solution:
-      "Designed onboarding-first layout with clear hierarchy, CTA flow, and motion feedback.",
+      "Redesigned the page around an onboarding-first flow: headline → value proof → single CTA. Added motion feedback to guide attention without distraction.",
     impact:
-      "Reduced onboarding friction and improved first-time activation.",
+      "Cleaner first impression, reduced decision friction, and a layout that guides users toward activation instead of confusion.",
     featuredNote: "Most complete system design case",
     demoLink: "https://chat-application-one-wine.vercel.app/",
     githubLink: "https://github.com/VitaliyPritula/Chat-Application",
     featured: true,
   },
-
   {
     title: "Motion-first E-commerce Experience",
-    context: "Driving deeper engagement through motion-led product interactions.",
+    context: "Static product pages that felt lifeless and drove low engagement.",
     type: "E-commerce",
     difficulty: "Medium complexity",
     stack: ["Next.js", "TypeScript", "Framer Motion", "Tailwind"],
     problem:
-      "Static interfaces reduced engagement and interaction depth.",
+      "Product cards had no interaction depth — users scrolled past without engaging.",
     solution:
-      "Introduced motion-driven interactions and dynamic product flow.",
+      "Introduced motion-driven interactions: hover states, entrance animations, and dynamic product transitions that reward exploration.",
     impact:
-      "Increased interaction depth on product cards.",
+      "Users spend more time interacting with product cards. Built as part of BazaTrainee's internal design system.",
     image: "/Projects/Animation.png",
     demoLink: "https://baza-everything-can-move.vercel.app/",
     githubLink: "https://github.com/baza-trainee/baza-everything-can-move",
   },
   {
     title: "Mobile Media Platform",
-    context: "Making content-heavy media accessible on mobile screens.",
+    context: "Content-heavy layout that collapsed on small screens.",
     type: "Mobile",
     difficulty: "Medium complexity",
     stack: ["React", "TypeScript", "Vite"],
     problem:
-      "Content-heavy layouts were difficult to consume on mobile devices.",
+      "The desktop layout ported to mobile without adaptation — content was dense, hierarchy unclear, and navigation hard to use one-handed.",
     solution:
-      "Rebuilt layout using mobile-first hierarchy and simplified content structure.",
+      "Rebuilt from a mobile-first perspective: simplified content blocks, larger tap targets, and a reading flow optimized for small screens.",
     impact:
-      "Improved first-time user comprehension of product value.",
+      "Mobile users can navigate and consume content without zooming or horizontal scrolling.",
     image: "/Projects/Zack Snyder's Justice League.png",
     demoLink: "https://zack-justice-league.vercel.app/",
     githubLink: "",
   },
   {
     title: "Commercial Landing for Local Business",
-    context: "Establishing a conversion-led digital presence for local brands.",
+    context: "A local business with no digital presence and zero conversion flow.",
     type: "Landing",
     difficulty: "Medium complexity",
     stack: ["Next.js", "TypeScript", "Tailwind"],
     problem:
-      "Local businesses lacked strong online presence and conversion flow.",
+      "The client had no website. Potential customers couldn't find them, verify credibility, or take action online.",
     solution:
-      "Created trust-focused landing page with clear service hierarchy and CTA structure.",
+      "Built a trust-focused landing page with clear service hierarchy, social proof placement, and a single primary CTA above the fold.",
     impact:
-      "Improved conversion readiness and credibility perception.",
+      "Client established a professional online presence with a clear path to contact and booking.",
     image: "/Projects/vlasnaPasika.png",
     demoLink: "https://family-apiary-website.vercel.app/",
     githubLink: "",
   },
   {
     title: "Service Booking Interface",
-    context: "Speeding up booking decisions on mobile.",
+    context: "Mobile users couldn't book fast enough to stay on the page.",
     type: "Service",
     difficulty: "Low complexity",
     stack: ["HTML", "CSS"],
     problem:
-      "Users needed faster access to booking information on mobile devices.",
+      "The booking flow had too many steps on mobile. Users dropped off before completing contact.",
     solution:
-      "Built minimal mobile-first UI optimized for fast decision-making.",
+      "Built a minimal mobile-first UI: one screen, one action, instant access to key booking details.",
     impact:
-      "Reduced friction in mobile booking flow.",
+      "Reduced steps to contact from 4 to 1. Optimized for thumb navigation.",
     image: "/Projects/auto-instructor.webp",
     demoLink: "https://auto-instructor.vercel.app/",
     githubLink: "",
   },
   {
-    title: "Mission-driven Web Platform UI",
-    context: "Bringing structure to mission-driven content for broad audiences.",
+    title: "Mission-driven Web Platform",
+    context: "Dense information architecture serving broad, non-technical audiences.",
     type: "Platform",
     difficulty: "Medium complexity",
     stack: ["React", "TypeScript", "Next.js", "Tailwind"],
     problem:
-      "Information-heavy content lacked structure and readability.",
+      "Content was organized for editors, not users. Key actions were buried and first-time visitors didn't know where to start.",
     solution:
-      "Designed clear UI hierarchy with improved content segmentation.",
+      "Restructured UI hierarchy by user intent — separated primary actions from supporting content, added clear section landmarks.",
     impact:
-      "Reduced time-to-first-action and task completion across dense content.",
+      "Users reach their first action faster. Content sections are independently navigable without scrolling the full page.",
     image: "/Projects/woin.webp",
     demoLink: "https://peaceful-warrior-foundation.vercel.app/ua",
     githubLink: "",
   },
   {
-    title: "Donation & Fundraising System UI",
-    context: "Creating emotional clarity for donation experiences.",
+    title: "Donation & Fundraising Platform",
+    context: "A donation flow that felt transactional instead of meaningful.",
     type: "Fundraising",
     difficulty: "Medium complexity",
     stack: ["React", "TypeScript", "SCSS", "Material UI"],
     problem:
-      "Donation flow lacked emotional engagement and clarity.",
+      "The donation form lacked emotional context. Users didn't understand the impact of their contribution before being asked to give.",
     solution:
-      "Designed emotionally-driven UI with simplified donation flow.",
+      "Designed an emotionally-driven UI: impact statements before the form, simplified flow, and clear confirmation feedback.",
     impact:
-      "Improved completion rate and user engagement.",
+      "Donation flow feels purposeful. Users understand where their money goes before they commit.",
     image: "/Projects/127-brig.webp",
     demoLink: "https://127-zbir.vercel.app/",
     githubLink: "",
   },
   {
     title: "Analytics Visualization Platform",
-    context: "Clarifying complex data through structured visualization.",
+    context: "Raw datasets with no visual structure — impossible to interpret quickly.",
     type: "Visualization",
     difficulty: "Medium complexity",
     stack: ["React", "TypeScript", "SCSS"],
     problem:
-      "Complex datasets were difficult to interpret visually.",
+      "Data was displayed as tables. Patterns and trends were invisible without manual analysis.",
     solution:
-      "Built structured visualization components with clear data hierarchy.",
+      "Built structured visualization components with consistent data hierarchy — charts, summaries, and drill-down views in a unified system.",
     impact:
-      "Reduced time-to-insight for complex datasets.",
+      "Key trends visible at a glance. No manual data parsing required.",
     image: "/Projects/44-brig.png",
     demoLink: "https://zbir-44-brigada.vercel.app/",
     githubLink: "",
   },
   {
     title: "Defense Support Platform",
-    context: "Surface reliable frontline information with minimal friction.",
+    context: "Critical frontline information buried under unclear navigation.",
     type: "Platform",
     difficulty: "High complexity",
     stack: ["React", "TypeScript", "Tailwind"],
     problem:
-      "Users needed fast access to structured and reliable information.",
+      "Users needed fast access to specific, time-sensitive information. The existing structure made navigation slow and error-prone.",
     solution:
-      "Built clear navigation system with accessible information architecture.",
+      "Built a clear navigation system with accessible information architecture — prioritized frequently accessed content and reduced click depth.",
     impact:
-      "Improved information accessibility and usability.",
+      "Critical information reachable in fewer steps. Usable under time pressure.",
     image: "/Projects/wart.jpeg",
     demoLink: "https://baza-frontline.vercel.app/",
     githubLink: "",
@@ -194,10 +193,10 @@ export default function ProjectsSectionWithFilters() {
             Engineering case studies
           </p>
           <h2 className="text-5xl md:text-6xl font-semibold tracking-tight text-white">
-            Product-led case studies, built like software.
+            Real problems. Real solutions.
           </h2>
           <p className="mt-4 max-w-3xl mx-auto text-base text-white/60">
-            A portfolio designed for product thinking: clear problem, sharp solution, and measurable impact.
+            Each project starts with a problem worth solving — and ends with a frontend that makes it easier for users to do what they came to do.
           </p>
         </div>
 
@@ -362,7 +361,6 @@ export default function ProjectsSectionWithFilters() {
                       <p className="text-xs text-white/70 mt-4">
                         <span className="text-white font-medium">Impact:</span> {project.impact}
                       </p>
-
                       <div className="flex flex-wrap gap-2 mt-5">
                         {project.stack.map((stackItem) => (
                           <span

@@ -4,6 +4,7 @@ import About from "@/components/section/About";
 import Skills from '@/components/section/Skills';
 import Projects from '@/components/section/Projects';
 import Experience from '@/components/section//Experience';
+import Testimonials from "@/components/section/Testimonials";
 import ScrollBtnt from "@/components/ui/ScrollBtn";
 
 export default function Home() {
@@ -14,7 +15,8 @@ export default function Home() {
       <Skills />
       <Projects />
       <Experience />
+      <Testimonials />
       <ScrollBtnt />
-      </div>
+    </div>
   );
 }

@@ -1,26 +1,25 @@
 "use client";
 import React from "react";
-// 1. Імпортуємо стилі як об'єкт styles
 import styles from './style.module.css';
 
 const experiences = [
   {
     position: "Lead Frontend Engineer",
-    company: "BazaTrainee (volunteer)",
+    company: "BazaTrainee",
     period: "Feb 2024 – Feb 2026",
-    location: "Remote",
+    location: "Remote · Volunteer",
 
     description:
-      "Led frontend development of scalable volunteer and educational platforms built with React ecosystem. Focused on architecture consistency, performance, and maintainable UI systems across multiple projects.",
+      "Led frontend across multiple volunteer platforms — from architecture decisions to code reviews and junior mentoring. Responsible for keeping the codebase consistent as the team and product scope grew.",
 
     challenge:
-      "Early-stage volunteer platforms often suffer from inconsistent UI structure and lack of scalable frontend architecture.",
+      "Each new project started from scratch with different conventions. Junior developers had no shared standards to follow, which slowed delivery and created inconsistencies across the codebase.",
 
     solution:
-      "Introduced reusable component patterns, standardized UI architecture, and improved development workflow using TypeScript and Tailwind CSS. Provided code reviews and technical guidance for junior developers.",
+      "Introduced a shared component library, established TypeScript and Tailwind conventions, and ran regular code reviews. Mentored junior developers through pull request feedback and 1:1 guidance.",
 
     impact:
-      "Improved code consistency, faster feature delivery, and better maintainability across multiple frontend projects.",
+      "Team onboarding time dropped. New features shipped without breaking existing UI. Juniors started contributing independently within weeks instead of months.",
 
     techStack: ["React", "TypeScript", "Tailwind", "Vite", "GitHub"],
   },
@@ -32,16 +31,16 @@ const experiences = [
     location: "Remote",
 
     description:
-      "Delivered production-ready websites, landing pages, and web applications for clients with a focus on performance, responsiveness, and modern UI experiences.",
+      "Built websites, landing pages, and web applications for clients across different industries. Handled full frontend delivery — from first layout to production deploy.",
 
     challenge:
-      "Many client projects required fast delivery while maintaining high UI quality and cross-device responsiveness.",
+      "Clients needed fast turnaround without sacrificing quality. Most had no technical background, so requirements were often vague and needed translation into concrete UI decisions.",
 
     solution:
-      "Built responsive interfaces using React and modern CSS practices, integrating animations and motion design to improve user engagement and visual clarity.",
+      "Developed a personal delivery workflow: clarify goals first, build a focused MVP, iterate on feedback. Used React, modern CSS, and Framer Motion to deliver responsive, polished interfaces quickly.",
 
     impact:
-      "Improved user experience, faster delivery cycles, and higher client satisfaction through consistent UI quality.",
+      "Clients received production-ready interfaces on schedule. Several returned for follow-up projects.",
 
     techStack: ["HTML", "CSS", "JavaScript", "React", "Framer Motion"],
   },
@@ -56,7 +55,7 @@ export default function ExperienceSection() {
             Experience
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            A quick overview of my professional and volunteer journey
+            2+ years leading frontend teams. 4+ years shipping production interfaces.
           </p>
         </div>
 
@@ -79,6 +78,18 @@ export default function ExperienceSection() {
                 {exp.location}
               </div>
               <p className="text-base mb-3">{exp.description}</p>
+
+              <div className="grid md:grid-cols-2 gap-4 mb-4 text-sm">
+                <div>
+                  <p className="text-muted-foreground font-medium mb-1">Challenge</p>
+                  <p>{exp.challenge}</p>
+                </div>
+                <div>
+                  <p className="text-muted-foreground font-medium mb-1">Impact</p>
+                  <p>{exp.impact}</p>
+                </div>
+              </div>
+
               <div className="flex flex-wrap gap-2">
                 {exp.techStack.map((tech, i) => (
                   <span
